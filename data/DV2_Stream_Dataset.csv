@@ -1,16 +1,16 @@
-﻿Year,Type,Generated
-2011,Black Coal,"9,833"
-2012,Black Coal,"10,177"
-2013,Black Coal,"11,014"
-2014,Black Coal,"11,869"
-2015,Black Coal,"12,250"
-2016,Black Coal,"11,982"
-2017,Black Coal,"11,814"
-2018,Black Coal,"12,456"
-2019,Black Coal,"12,721"
-2020,Black Coal,"12,279"
-2021,Black Coal,"11,442"
-2022,Black Coal,"10,838"
+Year,Type,Generated
+2011,Black Coal,9833
+2012,Black Coal,10177
+2013,Black Coal,11014
+2014,Black Coal,11869
+2015,Black Coal,12250
+2016,Black Coal,11982
+2017,Black Coal,11814
+2018,Black Coal,12456
+2019,Black Coal,12721
+2020,Black Coal,12279
+2021,Black Coal,11442
+2022,Black Coal,10838
 2011,Brown Coal,724
 2012,Brown Coal,734
 2013,Brown Coal,642
@@ -23,33 +23,33 @@
 2020,Brown Coal,423
 2021,Brown Coal,428
 2022,Brown Coal,410
-2011,Natural Gas,"2,213"
-2012,Natural Gas,"2,152"
-2013,Natural Gas,"2,424"
-2014,Natural Gas,"2,449"
-2015,Natural Gas,"2,527"
-2016,Natural Gas,"3,091"
-2017,Natural Gas,"3,971"
-2018,Natural Gas,"4,614"
-2019,Natural Gas,"5,257"
-2020,Natural Gas,"5,618"
-2021,Natural Gas,"5,359"
-2022,Natural Gas,"5,842"
-2011,Uranium,"3,355"
-2012,Uranium,"3,602"
-2013,Uranium,"4,209"
-2014,Uranium,"2,680"
-2015,Uranium,"2,872"
-2016,Uranium,"3,583"
-2017,Uranium,"3,429"
-2018,Uranium,"3,535"
-2019,Uranium,"3,581"
-2020,Uranium,"3,453"
-2021,Uranium,"2,920"
-2022,Uranium,"2,108"
-2011,Crude Oil,"1,101"
-2012,Crude Oil,"1,096"
-2013,Crude Oil,"1,020"
+2011,Natural Gas,2213
+2012,Natural Gas,2152
+2013,Natural Gas,2424
+2014,Natural Gas,2449
+2015,Natural Gas,2527
+2016,Natural Gas,3091
+2017,Natural Gas,3971
+2018,Natural Gas,4614
+2019,Natural Gas,5257
+2020,Natural Gas,5618
+2021,Natural Gas,5359
+2022,Natural Gas,5842
+2011,Uranium,3355
+2012,Uranium,3602
+2013,Uranium,4209
+2014,Uranium,2680
+2015,Uranium,2872
+2016,Uranium,3583
+2017,Uranium,3429
+2018,Uranium,3535
+2019,Uranium,3581
+2020,Uranium,3453
+2021,Uranium,2920
+2022,Uranium,2108
+2011,Crude Oil,1101
+2012,Crude Oil,1096
+2013,Crude Oil,1020
 2014,Crude Oil,942
 2015,Crude Oil,906
 2016,Crude Oil,879
