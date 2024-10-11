@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/aver0037/DV2/refs/heads/main/data/DV2_Area_Dataset.csv"},
+  "width": 425,
+  "params": [{
+    "name": "industry",
+    "select": {"type": "point", "fields": ["Type"]},
+    "bind": "legend"
+  }],
+  "mark": "area",
+  "encoding": {
+    "x": {
+      "timeUnit": "year", 
+      "field": "Year",
+      "axis": {"format": "%Y"},
+      "title": "Year"
+    },
+    "y": {
+      "aggregate": "sum", 
+      "field": "Generated",
+      "title": " Energy Generated (GWh)"
+    },
+    "color": {
+      "field": "Type",
+      "scale": {"scheme": "category20"}
+    },
+    "opacity": {
+      "condition": {"param": "industry", "value": 1},
+      "value": 0.25
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 49,
+  "height": 200,
+  "background": "#a3a3a3",
+
+  "data": {"url": "https://raw.githubusercontent.com/aver0037/DV2/refs/heads/main/data/DV2_Comet_Dataset.csv"},
+  "transform": [
+    {"pivot": "Year", "value": "Consumed_Per_Person", "groupby": ["Type", "Region"]},
+    {"fold": ["2011", "2021"], "as": ["Year", "Consumed_Per_Person"]},
+    {"calculate": "toNumber(datum.Year)", "as": "Year"},
+    {"calculate": "datum['2021'] - datum['2011']", "as": "delta"}
+  ],
+
+  "mark": "trail",
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "title": null
+    },
+    "y": {
+      "field": "Type",
+      "title": "Energy Type"
+    },
+    "size": {
+      "field": "Consumed_Per_Person",
+      "type": "quantitative",
+      "scale": {"range": [0, 30]},
+      "legend": {
+        "values": [10,100,300]
+      },
+      "title": "Consumption Per Capita (PJ)"
+    },
+    
+    "tooltip": [
+      {"field": "Year", "type": "quantitative", "title": "Year"},
+      {"field": "Consumed_Per_Person", "type": "quantitative", "title": "Consumption Per Capita (PJ)"}
+    ],
+    "color": {
+      "field": "delta",
+      "type": "quantitative",
+      "scale": {
+        "type": "linear",
+        "domain": [-400, -100, -10, 0, 10, 100, 400],
+        "range": ["#32508D","#5599C6","#C7E0EE","#F4F4F4","#FCD2BB","#EB754F","#A00D21"]
+      },
+      "title": "Change"
+    },
+    "column": {"field": "Region", "title": "State / Territory"}
+  },
+  "view": {"stroke": null},
+  "config": {"legend": {"orient": "bottom", "direction": "horizontal"}}
+}
