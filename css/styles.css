@@ -4,14 +4,14 @@ body {
     background-color: lightgrey;
 }
 
-h1 { /* title */
+h1 {
     font-family: "Bakbak One", sans-serif;
     color: #FFD700;
     text-align: center;
     font-size: 50px;
 }
 
-h2 { /* vis titles */
+h2 { 
     font-family: "Lato", sans-serif;
     color: white;
     background-color: #2D404E;
@@ -19,7 +19,7 @@ h2 { /* vis titles */
     padding: 10px;
 }
 
-p { /* paragraphs */
+p { 
     font-family: "Lato", sans-serif;
     font-style: normal;
     color: white;
@@ -27,39 +27,33 @@ p { /* paragraphs */
 
 /* class selectors - (overrides element selectors) */
 
-/* style */
-
-.page { /* page */
+.page {
     width: 1000px;
-    /* background-image: linear-gradient(#0E1B21,#2D404E,#0E1B21); */
     background-color: #0E1B21;
     margin: auto;
     padding: 25px;
     padding-top: 50px;
 }
 
-.highlight { /* bold values within paragraphs */
+.highlight { 
     color: #FFD700;
 }
 
-.metadata { /* metadata */
-    color: lightgrey;
+.metadata { 
     text-align: right;
     font-size: 10px;
 }
-
-/* layout */
 
 .map-container { 
     width: 100%;
 }
 
-.line-container { 
+.left-container { 
     width: 100%;
     padding-left: 50px;
 }
 
-.description-map-left { /* text */
+.description-map-left {
     padding-left: 50px;
     padding-right: 25px;
     text-align: justify;
@@ -71,12 +65,6 @@ p { /* paragraphs */
     text-align: justify;
 }
 
-.description-left { /* text */
-    padding-left: 50px;
-    padding-right: 25px;
-    text-align: left;
-}
-
 .description-right {
     padding-left: 25px;
     padding-right: 50px;
@@ -84,7 +72,11 @@ p { /* paragraphs */
 }
 
 .pure-g {
-    margin-bottom: 10px; /* space between rows */
+    margin-bottom: 10px; 
+}
+
+.vega-bind-name {
+    color: white; 
 }
 
 /* ID selectors - (overrides class and ID selectors) */
@@ -94,7 +86,8 @@ p { /* paragraphs */
     margin: 0 auto;
 }
 
-#subtitle { /* subtitle */
+#subtitle {
     text-align: center;
     font-weight: 300;
 }
+
