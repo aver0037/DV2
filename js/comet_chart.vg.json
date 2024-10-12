@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 49,
-  "height": 200,
+  "width": 50,
+  "height": 235,
   "background": "#a3a3a3",
 
   "data": {"url": "https://raw.githubusercontent.com/aver0037/DV2/refs/heads/main/data/DV2_Comet_Dataset.csv"},
@@ -16,7 +16,10 @@
   "encoding": {
     "x": {
       "field": "Year",
-      "title": null
+      "title": null,
+      "axis": {
+        "labelAngle": 0
+      }
     },
     "y": {
       "field": "Type",
@@ -27,13 +30,14 @@
       "type": "quantitative",
       "scale": {"range": [0, 30]},
       "legend": {
-        "values": [10,100,300]
+        "values": [100,250]
       },
-      "title": "Consumption Per Capita (PJ)"
+      "title": "Consumption Per Capita (GJ)"
     },
     
     "tooltip": [
       {"field": "Year", "type": "quantitative", "title": "Year"},
+      {"field": "Type","type": "nominal","title": "Energy Type"},
       {"field": "Consumed_Per_Person", "type": "quantitative", "title": "Consumption Per Capita (PJ)"}
     ],
     "color": {
@@ -44,10 +48,15 @@
         "domain": [-400, -100, -10, 0, 10, 100, 400],
         "range": ["#32508D","#5599C6","#C7E0EE","#F4F4F4","#FCD2BB","#EB754F","#A00D21"]
       },
-      "title": "Change"
+      "title": "10 Year Change (GJ)"
     },
     "column": {"field": "Region", "title": "State / Territory"}
   },
   "view": {"stroke": null},
-  "config": {"legend": {"orient": "bottom", "direction": "horizontal"}}
+  "config": {
+    "legend": {
+      "orient": "bottom",
+      "direction": "horizontal"
+    }
+  }
 }
