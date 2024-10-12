@@ -38,7 +38,7 @@
     "tooltip": [
       {"field": "Year", "type": "quantitative", "title": "Year"},
       {"field": "Type","type": "nominal","title": "Energy Type"},
-      {"field": "Consumed_Per_Person", "type": "quantitative", "title": "Consumption Per Capita (PJ)"}
+      {"field": "Consumed_Per_Person", "type": "quantitative", "title": "Consumption Per Capita (GJ)"}
     ],
     "color": {
       "field": "delta",
