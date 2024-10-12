@@ -43,7 +43,8 @@
           "axis": {
             "gridColor": "#b5b5b5",
             "tickColor": "#b5b5b5",
-            "color": "#b5b5b5"
+            "color": "#b5b5b5",
+            "tickCount": 5
           }
         },
         "y": {
