@@ -1,32 +1,84 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "https://raw.githubusercontent.com/aver0037/DV2/refs/heads/main/data/DV2_Area_Dataset.csv"},
-  "width": 425,
-  "params": [{
-    "name": "industry",
-    "select": {"type": "point", "fields": ["Type"]},
-    "bind": "legend"
-  }],
-  "mark": "area",
-  "encoding": {
-    "x": {
-      "timeUnit": "year", 
-      "field": "Year",
-      "axis": {"format": "%Y"},
-      "title": "Year"
+  "background": "#a3a3a3",
+  "vconcat": [
+    {
+      "width": 434,
+      "params": [{
+        "name": "industry",
+        "select": {"type": "point", "fields": ["Type"]},
+        "bind": "legend"
+      }],
+      "mark": "area",
+      "encoding": {
+        "x": {
+          "type": "temporal",
+          "field": "Year",
+          "axis": {"format": "%Y","tickCount": 2,"gridColor": "#b5b5b5"},
+          "title": " ",
+          "scale": {"domain": {"param": "brush"}}
+        },
+        "y": {
+          "aggregate": "sum", 
+          "field": "Generated",
+          "title": "Energy Generated (GigaWatt hours)",
+          "axis": {"gridColor": "#b5b5b5"}
+        },
+        "color": {
+          "field": "Type",
+          "scale": {"scheme": "category20"}
+        },
+        "opacity": {
+          "condition": {"param": "industry", "value": 0.75},
+          "value": 0.25
+        },
+        "tooltip": [
+          {"field": "Year","type": "temporal","title": "Year","format": "%Y"},
+          {"field": "Type","type": "nominal","title": "Renewable Energy"},
+          {"field": "Generated","type": "quantitative","title": "Energy Generated (GWh)", "format": ","}
+        ]
+      }
     },
-    "y": {
-      "aggregate": "sum", 
-      "field": "Generated",
-      "title": " Energy Generated (GWh)"
-    },
-    "color": {
-      "field": "Type",
-      "scale": {"scheme": "category20"}
-    },
-    "opacity": {
-      "condition": {"param": "industry", "value": 1},
-      "value": 0.25
+    {
+      "width": 425,
+      "height": 50,
+      "params": [{
+        "name": "industry",
+        "select": {"type": "point", "fields": ["Type"]},
+        "bind": "legend"
+      },
+      {"name": "brush", "select": {"type": "interval",
+      "encodings": ["x"]}}
+      ],
+      "mark": "area",
+      "encoding": {
+        "x": {
+          "timeUnit": "year", 
+          "field": "Year",
+          "axis": {"format": "%Y","tickCount": 5, "grid": false},
+          "title": "Year"
+        },
+        "y": {
+          "aggregate": "sum", 
+          "field": "Generated",
+          "title": " ",
+          "axis": {"tickCount": 0,"grid": false}
+        },
+        "color": {
+          "field": "Type",
+          "scale": {"scheme": "category20"}
+        },
+        "opacity": {
+          "condition": {"param": "industry", "value": 0.75},
+          "value": 0.25
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
     }
   }
 }
